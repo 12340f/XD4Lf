@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Luck!</title>
+ <style>
+  .f{
+   display: grid;
+   grid-template-columns: repeat(2,173px);
+   align-content: center;
+   padding: 0;
+   margin: 0;
+  }
+  div{
+   text-align: center;
+   font-size: 40px;
+  }
+  .curent{
+   background: #FFD7D7;
+   border: solid 4px #399AFF;
+   margin: 2px;
+   border-radius: 7px;
+  }
+  .c1{
+   background: #FFD7D7;
+   border: solid 4px #FFFFFF;
+   margin: 2px;
+  }
+  .c2{
+   background: #FFD7D7;
+   border: solid 4px #FFFFFF;
+   margin: 2px;
+  }
+  .c3{
+   background: #FFD7D7;
+   border: solid 4px #FFFFFF;
+   margin: 2px;
+  }
+  .c4{
+   background: #FFD7D7;
+   border: solid 4px #FFFFFF;
+   margin: 2px;
+  }
+  button{
+   border: solid 1px blue;
+   font-size: 25px;
+   border-radius: 5px;
+   background: #FA69FF;
+   visibility: qone;
+  }
+ </style>
+</head>
+<body>
+ <center>
+ <h2>Trying Your Luck! </h2>
+ <div class="f">
+  <p class="c1">100</p>
+  <p class="c1">300</p>
+  <p class="c1">50</p>
+  <p class="c1">500</p>
+ </div>
+ <div class="e"></div>
+ <script>
+  var f = document.querySelectorAll('.c1');
+  var d = document.querySelector('.f');
+  var end = document.querySelector('.e')
+  var i = 0;
+  setInterval(function x(){
+   i++;
+   if(i===5){
+    i=0;
+   }else if(i===4){
+    f[3].classList='curent'
+    f[2].classList='c3'
+    f[1].classList='c2'
+    f[0].classList='c1'
+   }else if(i===3){
+     f[3].classList = 'c4'
+     f[2].classList = 'curent'
+     f[0].classList = 'c2'
+     f[1].classList = 'c1'
+   }else if (i === 2) {
+    f[3].classList = 'c4'
+    f[2].classList = 'c3'
+    f[0].classList = 'curent'
+    f[1].classList = 'c1'
+   }else if (i === 1) {
+    f[3].classList = 'c4'
+    f[2].classList = 'c3'
+    f[0].classList = 'c2'
+    f[1].classList = 'curent'
+   }
+  }, 50)
+  setTimeout(function y(){
+    d.innerHTML=' <div class="c2">100</div><div class="c2">300</div><div class="c2">50</div><div class="curent">500</div><br><br>'
+   end.innerHTML='<div>You Are Win!</div><a href="index1.html"><button>next</button></a>'
+  },4000)
+ </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Wllcome</title>
+ <style>
+  #full{
+  }
+  button{
+   background: #FA48FF;
+   border: solid 1px blue;
+   border-radius: 6px;
+   font-size: 20px;
+  }
+  html{
+   background: #FF82C9;
+  }
+ </style>
+</head>
+<body>
+ <div class="wel" id="full">
+  <center>
+  <h2>Wellcome To Quiz</h2>
+ </div>
+ <script>
+  var wel = document.querySelector('.wel');
+  setTimeout(function x(){
+   wel.id='wel'
+   wel.innerHTML='<center><h2>Wellcome To Quiz</h2><br><a href="luck.html"><button>Try Your Luck</button></a>'
+  },1000)
+ </script>
+</body>
+</html>
